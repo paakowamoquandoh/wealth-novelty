@@ -1,0 +1,25 @@
+.payment label {
+  font-weight: 600;
+  color: #000d6b;
+}
+
+.payment button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: #000d6b;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .flexColumn{
+    flex-direction: column;
+  }
+  .bankpayment{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
