@@ -1,51 +1,108 @@
-import "./footer.css";
+import React from "react";
+
+import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Link } from "react-router-dom";
+import "../../styles/footer.css";
+import logo from "../../assets/media/logo.jpeg"
+
+const quickLinks = [
+  {
+    path: "/rental",
+    display: "Rental",
+  },
+
+  {
+    path: "#",
+    display: "Privacy Policy",
+  },
+
+  {
+    path: "/cars",
+    display: "Car Listing",
+  },
+  {
+    path: "/blogs",
+    display: "Blog",
+  },
+
+  {
+    path: "/contact",
+    display: "Contact",
+  },
+];
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
-    <div className="footer">
-      <div className="fLists">
-        <ul className="fList">
-          <li className="fListItem">Countries</li>
-          <li className="fListItem">Regions</li>
-          <li className="fListItem">Cities</li>
-          <li className="fListItem">Districts</li>
-          <li className="fListItem">Airports</li>
-          <li className="fListItem">Hotels</li>
-        </ul>
-        <ul className="fList">
-          <li className="fListItem">Homes </li>
-          <li className="fListItem">Apartments </li>
-          <li className="fListItem">Resorts </li>
-          <li className="fListItem">Villas</li>
-          <li className="fListItem">Hostels</li>
-          <li className="fListItem">Guest houses</li>
-        </ul>
-        <ul className="fList">
-          <li className="fListItem">Unique places to stay </li>
-          <li className="fListItem">Reviews</li>
-          <li className="fListItem">Unpacked: Travel articles </li>
-          <li className="fListItem">Travel communities </li>
-          <li className="fListItem">Seasonal and holiday deals </li>
-        </ul>
-        <ul className="fList">
-          <li className="fListItem">Car rental </li>
-          <li className="fListItem">Flight Finder</li>
-          <li className="fListItem">Restaurant reservations </li>
-          <li className="fListItem">Travel Agents </li>
-        </ul>
-        <ul className="fList">
-          <li className="fListItem">Curtomer Service</li>
-          <li className="fListItem">Partner Help</li>
-          <li className="fListItem">Careers</li>
-          <li className="fListItem">Sustainability</li>
-          <li className="fListItem">Press center</li>
-          <li className="fListItem">Safety Resource Center</li>
-          <li className="fListItem">Investor relations</li>
-          <li className="fListItem">Terms & conditions</li>
-        </ul>
-      </div>
-      <div className="fText">Copyright © 2022 Lamabooking.</div>
-    </div>
+    <footer className="footer">
+      <Container>
+        <Row>
+          <Col lg="4" md="4" sm="12">
+            <div className="logo footer__logo">
+              <h1>
+                <Link to="/home" className=" d-flex align-items-center gap-2">
+                  {/* <i class="ri-car-line"></i> */}
+                  <span className="brandLogo">
+                     <img src={logo} alt=""/>
+                    </span>
+                </Link>
+              </h1>
+            </div>
+            <p className="footer__logo-content">
+            Accra’s No. 1 Most Affordable Car Dealership in 🇬🇭 🏎️🏎️. Buy foreign used cars directly from Canada, USA. Rental cars available.
+            </p>
+          </Col>
+
+          <Col lg="2" md="4" sm="6">
+            <div className="mb-4">
+              <h5 className="footer__link-title">Quick Links</h5>
+              <ListGroup>
+                {quickLinks.map((item, index) => (
+                  <ListGroupItem key={index} className="p-0 mt-3 quick__link">
+                    <Link to={item.path}>{item.display}</Link>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+            </div>
+          </Col>
+
+          <Col lg="3" md="4" sm="6">
+            <div className="mb-4">
+              <h5 className="footer__link-title mb-4">Head Office</h5>
+              <p className="office__info">Adenta Dodowa, Adenta, Accra, Ghana</p>
+              <p className="office__info">Phones: +233240234587/+233248130432/+233206448604</p>
+
+              <p className="office__info">Email: wealthnovelty@gmail.com</p>
+
+              <p className="office__info">Office Time: 8am - 5pm</p>
+            </div>
+          </Col>
+
+          <Col lg="3" md="4" sm="12">
+            <div className="mb-4">
+              <h5 className="footer__link-title">Newsletter</h5>
+              <p className="section__description">Subscribe our newsletter</p>
+              <div className="newsletter">
+                <input type="email" placeholder="Email" />
+                <span>
+                  <i class="ri-send-plane-line"></i>
+                </span>
+              </div>
+            </div>
+          </Col>
+
+          <Col lg="12">
+            <div className="footer__bottom">
+              <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">
+                <i class="ri-copyright-line"></i>Copyright {year}, Developed by
+                theDevFelix. All rights reserved.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
   );
 };
 
