@@ -15,6 +15,14 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    idType: {
+      type: String,
+      required: true,
+    },
+    idNumber: {
+      type: String,
+      required: true,
+    },
     img: {
       type: String,
     },

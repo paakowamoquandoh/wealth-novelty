@@ -3,7 +3,7 @@ export const userInputs = [
     id: "username",
     label: "Username",
     type: "text",
-    placeholder: "john_doe",
+    placeholder: "john noble",
   },
   {
     id: "email",
@@ -15,7 +15,7 @@ export const userInputs = [
     id: "phone",
     label: "Phone",
     type: "text",
-    placeholder: "+1 234 567 89",
+    placeholder: "+233 234 567 89",
   },
   {
     id: "password",
@@ -26,13 +26,25 @@ export const userInputs = [
     id: "country",
     label: "Country",
     type: "text",
-    placeholder: "USA",
+    placeholder: "Ghana",
+  },
+  {
+    id: "idNumber",
+    label: "Ghana-Card Number",
+    type: "text",
+    placeholder: "GHA-XXXXXXXXX-X",
+  },
+  {
+    id: "idType",
+    label: "ID Type",
+    type: "text",
+    placeholder: "Ghana Card",
   },
   {
     id: "city",
     label: "City",
     type: "text",
-    placeholder: "USA",
+    placeholder: "tema",
   },
 ];
 
