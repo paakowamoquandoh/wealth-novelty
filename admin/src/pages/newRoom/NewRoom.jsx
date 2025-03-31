@@ -2,7 +2,6 @@
 import "./newRoom.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 import { roomInputs } from "../../formSource";
 import useFetch from "../../hooks/useFetch";
@@ -13,7 +12,7 @@ const NewRoom = () => {
   const [hotelid, setHotelId] = useState(undefined);
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading, error } = useFetch("http://localhost:8800/api/hotels", {withCredentials:true});
+  const { data, loading } = useFetch("http://localhost:8800/api/hotels", {withCredentials:true});
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -35,7 +34,7 @@ const NewRoom = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Add New Room</h1>
+          <h1>Add New Car for Rental</h1>
         </div>
         <div className="bottom">
           <div className="right">
@@ -52,14 +51,14 @@ const NewRoom = () => {
                 </div>
               ))}
               <div className="formInput">
-                <label>Rooms</label>
+                <label>Feautures</label>
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
-                  placeholder="give comma between room numbers."
+                  placeholder="no AC, push to start etc"
                 />
               </div>
               <div className="formInput">
-                <label>Choose a hotel</label>
+                <label>Choose a Car</label>
                 <select
                   id="hotelId"
                   onChange={(e) => setHotelId(e.target.value)}

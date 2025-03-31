@@ -52,7 +52,6 @@ const Datatable = ({columns}) => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        <span className="capitalise">{path}</span>
         <Link to={`/${path}/new`} className="link">
           Add new
         </Link>

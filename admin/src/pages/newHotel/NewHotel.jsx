@@ -12,7 +12,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading, error } = useFetch("http://localhost:8800/api/rooms");
+  const { data, loading } = useFetch("http://localhost:8800/api/rooms");
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -60,7 +60,7 @@ const NewHotel = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Add New Product</h1>
+          <h1>Add New Car</h1>
         </div>
         <div className="bottom">
           <div className="left">
@@ -100,14 +100,14 @@ const NewHotel = () => {
                 </div>
               ))}
               <div className="formInput">
-                <label>Featured</label>
+                <label>For Rent</label>
                 <select id="featured" onChange={handleChange}>
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
               </div>
               <div className="selectRooms">
-                <label>Rooms</label>
+                <label>Available rent periods</label>
                 <select id="rooms" multiple onChange={handleSelect}>
                   {loading
                     ? "loading"
