@@ -1,37 +1,45 @@
 import { Link } from "react-router-dom";
-import "./searchItem.css";
+import React from "react";
+import { Col } from "reactstrap";
 
 const SearchItem = ({ item }) => {
   return (
-    <div className="searchItem">
-      <img src={item.photos[0]} alt="" className="siImg" />
-      <div className="siDesc">
-        <h1 className="siTitle">{item.name}</h1>
-        <span className="siDistance">{item.distance}m from center</span>
-        <span className="siTaxiOp">Free airport taxi</span>
-        <span className="siSubtitle">
-          Studio Apartment with Air conditioning
-        </span>
-        <span className="siFeatures">{item.desc}</span>
-        <span className="siCancelOp">Free cancellation </span>
-        <span className="siCancelOpSubtitle">
-          You can cancel later, so lock in this great price today!
-        </span>
-      </div>
-      <div className="siDetails">
-        {item.rating && <div className="siRating">
-          <span>Excellent</span>
-          <button>{item.rating}</button>
-        </div>}
-        <div className="siDetailTexts">
-          <span className="siPrice">${item.cheapestPrice}</span>
-          <span className="siTaxOp">Includes taxes and fees</span>
-          <Link to={`/hotels/${item._id}`}>
-          <button className="siCheckButton">See availability</button>
-          </Link>
-        </div>
-      </div>
-    </div>
+       <Col lg="4" md="4" sm="6" className="mb-5">
+            <div className="car__item">
+              <div className="car__img">
+                <img src={item.photos[0]} alt="" className="w-100" />
+              </div>
+      
+              <div className="car__item-content mt-4">
+                <h4 className="section__title text-center">{item.name}</h4>
+                <h6 className="rent__price text-center mt-">
+                  Ghc{item.cheapestPrice}.00 <span>/ Day</span>
+                </h6>
+      
+                <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">
+                  <span className=" d-flex align-items-center gap-1">
+                    <i class="ri-car-line"></i> {item.model}
+                  </span>
+                  <span className=" d-flex align-items-center gap-1">
+                    <i class="ri-settings-2-line"></i> {item.transmission}
+                  </span>
+                  <span className=" d-flex align-items-center gap-1">
+                    <i class="ri-timer-flash-line"></i> {item.distance}
+                  </span>
+                </div>
+      
+                <button className=" w-50 car__item-btn car__btn-rent">
+                  <Link to={`/hotels`}>Buy now</Link>
+                </button>
+      
+                <button className=" w-50 car__item-btn car__btn-details">
+                  <Link to={`/hotels/${item._id}`}>
+         Details
+          </Link> 
+                </button>
+              </div>
+            </div>
+          </Col>
   );
 };
 

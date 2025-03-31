@@ -32,7 +32,7 @@ const List = () => {
               <input placeholder={destination} type="text" />
             </div>
             <div className="lsItem">
-              <label>Check-in Date</label>
+              <label>Rental Period</label>
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
                 dates[0].startDate,
                 "MM/dd/yyyy"
@@ -46,7 +46,7 @@ const List = () => {
               )}
             </div>
             <div className="lsItem">
-              <label>Options</label>
+              <label>Details</label>
               <div className="lsOptions">
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
@@ -79,7 +79,7 @@ const List = () => {
                   />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOptionText">Room</span>
+                  <span className="lsOptionText">No of Cars</span>
                   <input
                     type="number"
                     min={1}
@@ -91,7 +91,7 @@ const List = () => {
             </div>
             <button onClick={handleClick}>Search</button>
           </div>
-          <div className="listResult">
+          <div className="">
           {loading ? (
               "loading"
             ) : (
