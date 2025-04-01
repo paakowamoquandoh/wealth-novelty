@@ -13,10 +13,6 @@ const HotelSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  address: {
-    type: String,
-    required: true,
-  },
   condition: {
     type: String,
     required: true,
@@ -45,6 +41,18 @@ const HotelSchema = new mongoose.Schema({
     type: [String],
   },
   title: {
+    type: String,
+    required: true,
+  },
+  colour: {
+    type: String,
+    required: true,
+  },
+  licensePlate: {
+    type: String,
+    required: true,
+  },
+  vin: {
     type: String,
     required: true,
   },

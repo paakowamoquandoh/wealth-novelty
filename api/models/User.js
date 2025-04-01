@@ -23,10 +23,18 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    licenseNo: {
+      type: String,
+      required: true,
+    },
     img: {
       type: String,
     },
     city: {
+      type: String,
+      required: true,
+    },
+    address: {
       type: String,
       required: true,
     },

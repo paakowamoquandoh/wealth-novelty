@@ -23,6 +23,11 @@ export const userInputs = [
     type: "password",
   },
   {
+    id: "address",
+    label: "Address",
+    type: "text",
+  },
+  {
     id: "country",
     label: "Country",
     type: "text",
@@ -39,6 +44,11 @@ export const userInputs = [
     label: "ID Type",
     type: "text",
     placeholder: "Ghana Card",
+  },
+  {
+    id: "licenceNo",
+    label: "Driver License",
+    type: "text",
   },
   {
     id: "city",
