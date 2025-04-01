@@ -91,7 +91,7 @@ const List = () => {
             </div>
             <button onClick={handleClick}>Search</button>
           </div>
-          <div className="">
+          <div className="rentResult">
           {loading ? (
               "loading"
             ) : (

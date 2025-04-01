@@ -8,14 +8,14 @@
 
 .listWrapper {
   width: 100%;
-  display: flex;
+  display: flex;flex-direction: row;
   gap: 20px;
-  max-width: 1024px;
+  
 }
 
 .listSearch {
   flex: 1;
-  background-color: rgb(1, 175, 166);
+  background-color: rgba(0, 45, 88, 0.267);
   padding: 10px;
   border-radius: 10px;
   position: sticky;
@@ -90,11 +90,12 @@
   cursor: pointer;
 }
 
-.listResult {
+.rentResult {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .datepicker span{
