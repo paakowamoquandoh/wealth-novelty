@@ -1,6 +1,5 @@
 import "./hotel.css";
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -96,18 +95,30 @@ const Hotel = () => {
             </div>
           )}
           <div className="hotelWrapper">
-            <button className="bookNow">Reserve or Book Now!</button>
+          <span className="bookNow">
+                  Click below to view company policy
+                  <button
+                  onClick={() =>
+                    window.open(
+                      `${process.env.PUBLIC_URL}/assets/WEALTH AUTO RENTAL AGREEMENT FORM.pdf`,
+                      "_blank"
+                    )
+                  }
+                  className="btn btn-primary mb-3"
+                >
+                  Terms and Conditions
+                </button>
+                </span>
             <h1 className="hotelTitle">{data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />
-              <span>{data.address}</span>
+              <span>{data.city}</span>
             </div>
             <span className="hotelDistance">
-              Excellent location – {data.distance}m from center
+              Excellent Mileage – {data.distance}kmpl
             </span>
             <span className="hotelPriceHighlight">
-              Book a stay over ${data.cheapestPrice} at this property and get a
-              free airport taxi
+              Book for at least Ghc{data.cheapestPrice} a day
             </span>
             <div className="hotelImages">
               {data.photos?.map((photo, i) => (
@@ -123,23 +134,29 @@ const Hotel = () => {
             </div>
             <div className="hotelDetails">
               <div className="hotelDetailsTexts">
-                <h1 className="hotelTitle">{data.title}</h1>
+                <h1 className="hotelTitle">{data.transmission}</h1>
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">
-                <h1>Perfect for a {days}-night stay!</h1>
-                <span>
-                  Located in the real heart of Krakow, this property has an
-                  excellent location score of 9.8!
-                </span>
-                <h2>
-  <b>${days * data.cheapestPrice * options.room}</b> ({days} nights)
-</h2>
+                <h1>Perfect for {days} days ride!</h1>
+                <span className="d-flex align-items-center gap-2">
+                    <span style={{ color: "#f9a826" }}>
+                      <i className="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
+                    </span>
+                    ({data.rating} ratings)
+                  </span>
+                
+                <h4>
+  <b>Ghc{days * data.cheapestPrice * options.room}</b> (for {days} days)
+</h4>
                 <button onClick={handleClick}>Reserve or Book Now!</button>
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       )}
       {openModal && <Reserve setOpen={setOpenModal} hotelId={id}/>}
