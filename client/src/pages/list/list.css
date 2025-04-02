@@ -1,21 +1,20 @@
 .listContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin: 10px 6rem;
-  gap: 2rem;
+  margin: 10px 4rem;
+  gap: 1rem;
 }
 
 .listWrapper {
   width: 100%;
-  display: flex;flex-direction: row;
+  display: flex;
+  flex-direction: row;
   gap: 20px;
-  
 }
 
 .listSearch {
   flex: 1;
-  background-color: rgba(0, 45, 88, 0.267);
+  background-color: rgb(63, 209, 209);
   padding: 10px;
   border-radius: 10px;
   position: sticky;
@@ -26,7 +25,7 @@
 
 .lsTitle{
   font-size: 20px;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -72,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: #555;
+  color: #ffffff;
   font-size: 12px;
 }
 
@@ -92,6 +91,7 @@
 
 .rentResult {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -122,9 +122,21 @@
 
   .listSearch {
    width: 98%;
+   position: static;
   }
 
   .listContainer {
     margin: 10px;
+  }
+
+  .rentResult {
+    width: 100%;  
+    flex-direction: column;
+    
+  }
+
+  .rentResult img{
+    object-fit: cover;
+    height: 200px;
   }
 }

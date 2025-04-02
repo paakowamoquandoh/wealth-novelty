@@ -4,16 +4,16 @@ import { Col } from "reactstrap";
 
 const SearchItem = ({ item }) => {
   return (
-       <Col lg="4" md="4" sm="6" className="mb-5">
+       <Col lg="3" md="12" sm="12" className="mb-2">
             <div className="car__item">
               <div className="car__img">
                 <img src={item.photos[0]} alt="" className="w-100" />
               </div>
       
               <div className="car__item-content mt-4">
-                <h4 className="section__title text-center">{item.name}</h4>
+                <h6 className="section__title text-center">{item.name}</h6>
                 <h6 className="rent__price text-center mt-">
-                  Ghc{item.cheapestPrice}.00 <span>/ Day</span>
+                  Ghc{item.cheapestPrice} <span>/ Day</span>
                 </h6>
       
                 <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">

@@ -65,7 +65,7 @@ const Hotel = () => {
     <div>
       <Header type="list" />
       {loading ? (
-        "loading"
+        "loading" 
       ) : (
         <div className="hotelContainer">
           {open && (
@@ -109,7 +109,7 @@ const Hotel = () => {
                   Terms and Conditions
                 </button>
                 </span>
-            <h1 className="hotelTitle">{data.name}</h1>
+            <h1 className="hotelTitle">{data.model} {data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />
               <span>{data.city}</span>
@@ -134,7 +134,7 @@ const Hotel = () => {
             </div>
             <div className="hotelDetails">
               <div className="hotelDetailsTexts">
-                <h1 className="hotelTitle">{data.transmission}</h1>
+                <h1 className="hotelTitle">{data.transmission} transmission</h1>
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">

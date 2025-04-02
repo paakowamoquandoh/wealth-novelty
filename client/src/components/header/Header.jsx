@@ -58,7 +58,7 @@ const Header = ({ type }) => {
       >
         {type !== "list" && (
           <>
-            <h1 className="rentTitle">
+            <h1 className="rentTitle noDisplay">
               Find the the best cars here. It's Genius.
             </h1>
             <div className="rentSearch">

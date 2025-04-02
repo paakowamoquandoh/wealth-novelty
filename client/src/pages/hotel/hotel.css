@@ -13,6 +13,7 @@
   flex-direction: column;
   gap: 10px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .bookNow {
@@ -34,7 +35,7 @@
 }
 
 .hotelAddress {
-  font-size: 12px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -151,4 +152,33 @@
   font-size: 50px;
   color: lightgray;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .bookNow {
+    position: static;
+    top: 0px;
+    right: 0;
+    border: none;
+    padding: 10px;
+  }
+
+  .hotelTitle {
+   text-align: center;
+   font-size: 1rem;
+   text-transform: capitalize;
+  }
+
+  .hotelWrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  .hotelImages {
+    margin: 0.5rem 10px;
+  }
+
+  .hotelDetails {
+   flex-direction: column;
+   margin: 0.4rem 20px;
+  }
 }

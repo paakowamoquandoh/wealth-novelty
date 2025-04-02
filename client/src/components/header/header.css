@@ -194,6 +194,10 @@
   .date {  
     top: 150px;
   }
+
+  .noDisplay{
+    display: none;
+  }
    
 }
 
