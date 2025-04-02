@@ -74,7 +74,7 @@ export const hotelColumns = [
   {
     field: "model",
     headerName: "Model",
-    width: 230,
+    width: 120,
   },
   {
     field: "title",
@@ -133,6 +133,11 @@ export const roomColumns = [
   {
     field: "price",
     headerName: "Price Per Day",
+    width: 100,
+  },
+  {
+    field: "licensePlate",
+    headerName: "Car Number",
     width: 100,
   },
   {

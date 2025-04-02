@@ -167,4 +167,11 @@ export const roomInputs = [
     type: "number",
     placeholder: "2",
   },
+  {
+    id: "lincensePlate",
+    label: "Car Number",
+    type: "text",
+    placeholder: "GN 1122 24",
+  },
+  
 ];

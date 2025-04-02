@@ -17,6 +17,10 @@ const RoomSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    licensePlate: {
+      type: String,
+      required: true,
+    },
     roomNumbers: [{ number: String, unavailableDates: {type: [Date]}}],
   },
   { timestamps: true }
