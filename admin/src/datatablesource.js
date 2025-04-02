@@ -126,6 +126,11 @@ export const roomColumns = [
     width: 230,
   },
   {
+    field: "name",
+    headerName: "Car",
+    width: 230,
+  },
+  {
     field: "desc",
     headerName: "Description",
     width: 200,
@@ -136,7 +141,7 @@ export const roomColumns = [
     width: 100,
   },
   {
-    field: "licensePlate",
+    field: "carNumber",
     headerName: "Car Number",
     width: 100,
   },

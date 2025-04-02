@@ -150,6 +150,12 @@ export const roomInputs = [
     placeholder: "1-2 days, 3-4 weeks",
   },
   {
+    id: "name",
+    label: "Car",
+    type: "text",
+    placeholder: "toyota venza",
+  },
+  {
     id: "desc",
     label: "Description",
     type: "text",
@@ -168,7 +174,7 @@ export const roomInputs = [
     placeholder: "2",
   },
   {
-    id: "lincensePlate",
+    id: "carNumber",
     label: "Car Number",
     type: "text",
     placeholder: "GN 1122 24",

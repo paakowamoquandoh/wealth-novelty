@@ -5,6 +5,10 @@ const RoomSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+      required: true,
+    },
     price: {
       type: Number,
       required: true,
@@ -17,7 +21,7 @@ const RoomSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    licensePlate: {
+    carNumber: {
       type: String,
       required: true,
     },
