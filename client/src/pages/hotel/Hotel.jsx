@@ -56,7 +56,7 @@ const Hotel = () => {
 
   const handleClick = () => {
     if (user) {
-      setOpenModal(true);
+      navigate("/contact")
     } else {
       navigate("/login");
     }

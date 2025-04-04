@@ -29,7 +29,7 @@ const SearchItem = ({ item }) => {
                 </div>
       
                 <button className=" w-50 car__item-btn car__btn-rent">
-                  <Link to={`/hotels`}>Buy now</Link>
+                  <Link to={`/contact`}>Book now</Link>
                 </button>
       
                 <button className=" w-50 car__item-btn car__btn-details">

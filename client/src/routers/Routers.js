@@ -13,7 +13,7 @@ import Hotel from "../pages/hotel/Hotel";
 import List from "../pages/list/List";
 import Homepage from "../webpages/Homepage";
 import Rentals from "../pages/rental/Rental";
-
+import PaymentSection from "../webpages/PaymentSection";
 
 
 const Routers = () => {
@@ -31,6 +31,7 @@ const Routers = () => {
       <Route path="/cars/:slug" element={<CarDetails />} />
       {/* <Route path="/carforrent/:slug" element={<CarForRent />} /> */}
       {/* <Route path="/blogs" element={<AboutUs />} /> */}
+      <Route path="/payment" element={<PaymentSection />} />
       <Route path="/blogs/:slug" element={<BlogDetails />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
