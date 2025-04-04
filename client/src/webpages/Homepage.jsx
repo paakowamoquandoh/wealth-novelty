@@ -94,7 +94,7 @@ const Homepage = () => {
           <Row>
             <Col lg="12" className="mb-5 text-center">
               <h6 className="section__subtitle">Wealth Novelty</h6>
-              <h2 className="section__title">Featured Cars</h2>
+              <h2 className="section__title">Cars for Rent</h2>
             </Col>
             <OurMembers />
           </Row>

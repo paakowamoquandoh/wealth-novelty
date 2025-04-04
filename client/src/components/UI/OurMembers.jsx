@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import "../../styles/our-member.css";
 import { Col } from "reactstrap";
 import { ArrowLeft, ArrowRight, Star } from "react-feather";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import useFetch from "../../hooks/useFetch";
-
+import "../../styles/our-member.css";
 const OurMembers = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const { data, loading, error } = useFetch(
-    'http://localhost:8800/api/carslist?featured=true'
+    'http://localhost:8800/api/hotels?featured=true'
   );
+  const navigate = useNavigate(); // Initialize navigate function
 
   if (loading) {
     return <p>Loading, please wait...</p>;
@@ -18,8 +19,8 @@ const OurMembers = () => {
     return <p>Error loading data</p>;
   }
 
-  const itemsPerPage = 4; // Number of items per page
-  const totalItems = data.length; // Total number of items
+  const itemsPerPage = 4;
+  const totalItems = data.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handlePageChange = (newPage) => {
@@ -28,21 +29,31 @@ const OurMembers = () => {
     }
   };
 
-  // Calculate the items to be displayed on the current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const selectedItems = data.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <>
       {selectedItems.map((item) => (
-        <Col lg="3" md="3" sm="4" xs="6" key={item._id} className="mb-4">
+        <Col
+          lg="3"
+          md="3"
+          sm="4"
+          xs="6"
+          key={item._id}
+          className="mb-4"
+          onClick={() => navigate('/rental')} // Navigate on click
+          style={{ cursor: 'pointer' }} // Indicate clickable items
+        >
           <div className="single__member">
             <div className="single__member-img">
               <img src={item.photos[0]} alt="" className="w-100" />
             </div>
-            <h6 className="text-center mb-0 mt-3">{item.model} {item.name}</h6>
+            <h6 className="text-center mb-0 mt-3">
+              {item.model} {item.name}
+            </h6>
             <p className="section__description text-center price">
-              GhC {item.cheapestPrice}
+              GhC {item.cheapestPrice}/day
             </p>
             <div className="rating text-center">
               {Array.from({ length: item.rating }).map((_, index) => (
@@ -53,7 +64,10 @@ const OurMembers = () => {
         </Col>
       ))}
       <div className="pagination">
-        <button className="arrows" onClick={() => handlePageChange(currentPage - 1)}>
+        <button
+          className="arrows"
+          onClick={() => handlePageChange(currentPage - 1)}
+        >
           <ArrowLeft size={20} className="icon-fill" />
         </button>
         {Array.from({ length: totalPages }).map((_, index) => (
@@ -65,7 +79,10 @@ const OurMembers = () => {
             {index + 1}
           </button>
         ))}
-        <button className="arrows" onClick={() => handlePageChange(currentPage + 1)}>
+        <button
+          className="arrows"
+          onClick={() => handlePageChange(currentPage + 1)}
+        >
           <ArrowRight size={20} className="icon-fill" />
         </button>
       </div>
