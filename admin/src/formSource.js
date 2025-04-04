@@ -117,6 +117,18 @@ export const hotelInputs = [
     placeholder: "relaxed and smooth steering...",
   },
   {
+    id: "desc",
+    label: "Available in",
+    type: "text",
+    placeholder: "accra or tema",
+  },
+  {
+    id: "condition",
+    label: "Condition",
+    type: "text",
+    placeholder: "new",
+  },
+  {
     id: "distance",
     label: "Mileage",
     type: "text",
@@ -127,6 +139,42 @@ export const hotelInputs = [
     label: "Model",
     type: "text",
     placeholder: "toyota",
+  },
+  {
+    id: "vin",
+    label: "VIN",
+    type: "text",
+    placeholder: "vin serial",
+  },
+  {
+    id: "model",
+    label: "Make",
+    type: "text",
+    placeholder: "car make",
+  },
+  {
+    id: "year",
+    label: "Year",
+    type: "text",
+    placeholder: "2020",
+  },
+  {
+    id: "licensePlate",
+    label: "Car Number",
+    type: "text",
+    placeholder: "optional",
+  },
+  {
+    id: "colour",
+    label: "Colour",
+    type: "text",
+    placeholder: "car colour",
+  },
+  {
+    id: "engine",
+    label: "Engine",
+    type: "text",
+    placeholder: "enigine capacity",
   },
   {
     id: "transmission",

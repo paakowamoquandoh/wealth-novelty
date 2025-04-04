@@ -4,7 +4,7 @@ import { Col } from "reactstrap";
 
 const SearchItem = ({ item }) => {
   return (
-       <Col lg="3" md="12" sm="12" className="mb-2">
+       
             <div className="car__item">
               <div className="car__img">
                 <img src={item.photos[0]} alt="" className="w-100" />
@@ -39,7 +39,7 @@ const SearchItem = ({ item }) => {
                 </button>
               </div>
             </div>
-          </Col>
+         
   );
 };
 

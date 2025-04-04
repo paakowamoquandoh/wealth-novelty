@@ -49,8 +49,7 @@ const HotelSchema = new mongoose.Schema({
     required: true,
   },
   licensePlate: {
-    type: String,
-    required: true,
+    type: String
   },
   vin: {
     type: String,
@@ -73,6 +72,10 @@ const HotelSchema = new mongoose.Schema({
     required: true,
   },
   featured: {
+    type: Boolean,
+    default: false,
+  },
+  forSale: {
     type: Boolean,
     default: false,
   },

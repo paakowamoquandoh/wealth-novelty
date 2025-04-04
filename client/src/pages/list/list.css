@@ -98,6 +98,12 @@
   flex-wrap: wrap;
 }
 
+.rentResult img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 .datepicker span{
   color: #2c2c2c;
   font-style: italic;
