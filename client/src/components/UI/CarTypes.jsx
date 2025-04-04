@@ -9,7 +9,7 @@ import otherImg from "../../assets/media/types/others.jpg";
 
 const CarTypes = () => {
   const { data, loading, error } = useFetch(
-    'https://car-shop-rentals-kol7.onrender.com/api/carslist/countByType?types=sedan,suv,others'
+    'http://localhost:8800/api/hotels/countByType?types=sedan,suv,others'
   );
 
   if (loading) {
@@ -22,9 +22,9 @@ const CarTypes = () => {
 
   return (
     <>
-      <CarItem imgUrl={sedanImg} title="Sedan(Saloon)" quantity={data[0]} />
-      <CarItem imgUrl={suvImg} title="SUVs" quantity={data[1]} />
-      <CarItem imgUrl={otherImg} title="Others" quantity={data[2]} />
+      <CarItem imgUrl={sedanImg} title="Sedan(Saloon)" quantity={data[0]?.count} />
+<CarItem imgUrl={suvImg} title="SUVs" quantity={data[1]?.count} />
+<CarItem imgUrl={otherImg} title="Others" quantity={data[2]?.count} />
     </>
   );
 };

@@ -70,23 +70,68 @@ export const countByCity = async (req, res, next) => {
 
   export const countByType = async (req, res, next) => {
     try {
-      const hotelCount = await Hotel.countDocuments({ type: "hotel" });
-      const apartmentCount = await Hotel.countDocuments({ type: "apartment" });
-      const resortCount = await Hotel.countDocuments({ type: "resort" });
-      const villaCount = await Hotel.countDocuments({ type: "villa" });
-      const cabinCount = await Hotel.countDocuments({ type: "cabin" });
+      const hotelCount = await Hotel.countDocuments({ type: "sedan" });
+      const apartmentCount = await Hotel.countDocuments({ type: "suv" });
+      const resortCount = await Hotel.countDocuments({ type: "others" });
   
       res.status(200).json([
-        { type: "hotel", count: hotelCount },
-        { type: "apartments", count: apartmentCount },
-        { type: "resorts", count: resortCount },
-        { type: "villas", count: villaCount },
-        { type: "cabins", count: cabinCount },
+        { type: "sedan", count: hotelCount },
+        { type: "suv", count: apartmentCount },
+        { type: "others", count: resortCount },
       ]);
     } catch (err) {
       next(err);
     }
   };
+
+  export const countByModel = async (req, res, next) => {
+    try {
+      const toyotaCount = await Hotel.countDocuments({ model: "Toyota" });
+      const hondaCount = await Hotel.countDocuments({ model: "Honda" });
+      const hyundaiCount = await Hotel.countDocuments({ model: "Hyundai" });
+      const nissanCount = await Hotel.countDocuments({ model: "Nissan" });
+      const benzCount = await Hotel.countDocuments({ model: "Benz" });
+      const BMWCount = await Hotel.countDocuments({ model: "BMW" });
+      const kiaCount = await Hotel.countDocuments({ model: "Kia" });
+      const fordCount = await Hotel.countDocuments({ model: "Ford" });
+      const otherModelsCount = await Hotel.countDocuments({ model: "Other" });
+  
+      res.status(200).json([
+        { model: "Toyota", count: toyotaCount },
+        { model: "Honda", count: hondaCount },
+        { model: "Hyundai", count: hyundaiCount },
+        { model: "Nissan", count: nissanCount },
+        { model: "Benz", count: benzCount },
+        { model: "BMW", count: BMWCount },
+        { model: "Kia", count: kiaCount },
+        { model: "Ford", count: fordCount },
+        { model: "Other", count: otherModelsCount },
+      ]);
+    } catch (err) {
+      next(err);
+    }
+  };
+  
+
+  // export const countByType = async (req, res, next) => {
+  //   try {
+  //     const hotelCount = await Hotel.countDocuments({ type: "hotel" });
+  //     const apartmentCount = await Hotel.countDocuments({ type: "apartment" });
+  //     const resortCount = await Hotel.countDocuments({ type: "resort" });
+  //     const villaCount = await Hotel.countDocuments({ type: "villa" });
+  //     const cabinCount = await Hotel.countDocuments({ type: "cabin" });
+  
+  //     res.status(200).json([
+  //       { type: "hotel", count: hotelCount },
+  //       { type: "apartments", count: apartmentCount },
+  //       { type: "resorts", count: resortCount },
+  //       { type: "villas", count: villaCount },
+  //       { type: "cabins", count: cabinCount },
+  //     ]);
+  //   } catch (err) {
+  //     next(err);
+  //   }
+  // };
   
   export const getHotelRooms = async (req, res, next) => {
     try {
