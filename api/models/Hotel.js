@@ -49,7 +49,8 @@ const HotelSchema = new mongoose.Schema({
     required: true,
   },
   licensePlate: {
-    type: String
+    type: String,
+    required: true,
   },
   vin: {
     type: String,
@@ -63,13 +64,15 @@ const HotelSchema = new mongoose.Schema({
     type: Number,
     min: 0,
     max: 5,
-  },
+  }, 
   rooms: {
     type: [String],
   },
   cheapestPrice: {
-    type: Number,
-    required: true,
+    type: Number
+  },
+  sellingPrice: {
+    type: Number
   },
   featured: {
     type: Boolean,

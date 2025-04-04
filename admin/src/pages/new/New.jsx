@@ -27,7 +27,9 @@ const New = ({ inputs }) => {
         img: url,
       };
       await axios.post("http://localhost:8800/api/auth/register", newUser, {withCredentials:true})
-    } catch (error) {      
+    } catch (error) { 
+      console.error("Error during registration:", error);
+      alert("Error occurred during registration. Check console for details.");
     }
   }
 

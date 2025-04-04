@@ -6,10 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/testimonial.css";
 import useFetch from "../../hooks/useFetch";
 import RentalItem from "./rentalItem";
-import ava01 from "../../assets/all-images/cars-img/mercedes-offer.png";
-import ava02 from "../../assets/all-images/cars-img/bmw-offer.png";
-import ava03 from "../../assets/all-images/cars-img/nissan-offer.png";
-import ava04 from "../../assets/all-images/cars-img/offer-toyota.png";
+
 
 const Testimonial = () => {
   const { data, loading, error } = useFetch(

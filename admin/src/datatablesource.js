@@ -51,7 +51,7 @@ export const userColumns = [
   {
     field: "phone",
     headerName: "Phone",
-    width: 200,
+    width: 150,
   },
 ];
 
@@ -114,6 +114,11 @@ export const hotelColumns = [
   {
     field: "rating",
     headerName: "Rating",
+    width: 100,
+  },
+  {
+    field: "vin",
+    headerName: "VIN",
     width: 100,
   },
 ];

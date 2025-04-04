@@ -46,7 +46,7 @@ export const userInputs = [
     placeholder: "Ghana Card",
   },
   {
-    id: "licenceNo",
+    id: "licenseNo",
     label: "Driver License",
     type: "text",
   },
@@ -111,16 +111,10 @@ export const hotelInputs = [
     placeholder: "accra",
   },
   {
-    id: "address",
+    id: "desc",
     label: "Description",
     type: "text",
     placeholder: "relaxed and smooth steering...",
-  },
-  {
-    id: "desc",
-    label: "Available in",
-    type: "text",
-    placeholder: "accra or tema",
   },
   {
     id: "condition",
@@ -162,7 +156,7 @@ export const hotelInputs = [
     id: "licensePlate",
     label: "Car Number",
     type: "text",
-    placeholder: "optional",
+    placeholder: "DV 2222 25",
   },
   {
     id: "colour",
@@ -184,10 +178,18 @@ export const hotelInputs = [
   },
   {
     id: "cheapestPrice",
-    label: "Price",
+    label: "Price per day",
     type: "text",
-    placeholder: "100",
+    placeholder: "add in case of rental",
   },
+  {
+    id: "sellingPrice",
+    label: "Selling Price",
+    type: "text",
+    placeholder: "2500000",
+  },
+  
+  
 ];
 
 export const roomInputs = [
