@@ -9,7 +9,7 @@ import otherImg from "../../assets/media/types/others.jpg";
 
 const CarTypes = () => {
   const { data, loading, error } = useFetch(
-    'http://localhost:8800/api/hotels/countByType?types=sedan,suv,others'
+    'https://wealth-novelty-car-shop.onrender.com/api/hotels/countByType?types=sedan,suv,others'
   );
 
   if (loading) {
