@@ -37,7 +37,7 @@ const MainNav = () => {
     dispatch({ type: "LOGOUT" });
     localStorage.removeItem("user");
     navigate("/");
-  };
+  }; 
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
