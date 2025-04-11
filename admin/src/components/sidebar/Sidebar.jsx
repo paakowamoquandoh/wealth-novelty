@@ -54,7 +54,7 @@ const Sidebar = () => {
               <span>Cars</span>
             </li>
           </Link>
-          <Link to="/rooms" style={{ textDecoration: "none" }}>
+          {/* <Link to="/rooms" style={{ textDecoration: "none" }}>
           <li>
             <CreditCardIcon className="icon" />
             <span>Rentals</span>
@@ -63,7 +63,7 @@ const Sidebar = () => {
           <li>
             <LocalShippingIcon className="icon" />
             <span>Other</span>
-          </li>
+          </li> */}
          
           <p className="title">USER</p>
           <li>
