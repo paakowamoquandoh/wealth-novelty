@@ -26,7 +26,7 @@ mongoose.connection.on("disconnected", () => {
 
 //middlewares
 app.use(cookieParser())
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001', 'https://nobles-dashboard.onrender.com', 'https://wealth-novelty.onrender.com'];
 
 app.use(cors({
   origin: (origin, callback) => {
