@@ -64,9 +64,9 @@ const MainNav = () => {
                       className=" d-flex align-items-center gap-1"
                     >
                       <FontAwesomeIcon icon={faUser} />
-                      {user.username}
+                     
                     </Link>
-
+                    <span>{user.username}</span>
                     <Link
                       to="/register"
                       className=" d-flex align-items-center gap-1"

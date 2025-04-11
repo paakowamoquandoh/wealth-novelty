@@ -39,20 +39,28 @@ const NewHotel = () => {
             "https://api.cloudinary.com/v1_1/deiuhaivl/image/upload",
             data
           );
-
+  
           const { url } = uploadRes.data;
           return url;
         })
       );
-
+  
       const newhotel = {
         ...info,
-        rooms,
         photos: list,
       };
-
-      await axios.post("http://localhost:8800/api/hotels", newhotel, {withCredentials:true});
-    } catch (err) {console.log(err)}
+  
+      await axios.post("http://localhost:8800/api/hotels", newhotel, { withCredentials: true });
+  
+      // Alert on successful upload
+      alert("Upload successful!");
+    } catch (err) {
+      // Log the error for debugging
+      console.error("Upload error:", err);
+  
+      // Alert on error
+      alert("Error uploading. Please try again.");
+    }
   };
   return (
     <div className="new">
@@ -106,17 +114,11 @@ const NewHotel = () => {
                   <option value={true}>Yes</option>
                 </select>
               </div>
-              <div className="selectRooms">
-                <label>Available rent periods</label>
-                <select id="rooms" multiple onChange={handleSelect}>
-                  {loading
-                    ? "loading"
-                    : data &&
-                      data.map((room) => (
-                        <option key={room._id} value={room._id}>
-                          {room.title}
-                        </option>
-                      ))}
+              <div className="formInput">
+                <label>For Sale</label>
+                <select id="forSale" onChange={handleChange}>
+                  <option value={false}>No</option>
+                  <option value={true}>Yes</option>
                 </select>
               </div>
               <button onClick={handleClick}>Send</button>

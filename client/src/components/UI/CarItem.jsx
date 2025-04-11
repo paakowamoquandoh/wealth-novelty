@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../styles/car-item.css";
 
 const CarItem = (props) => {
-  const { photos, model, name, transmission, distance, sellingPrice } = props.item;
+  const { photos, model, name, transmission, distance, sellingPrice,_id } = props.item;
   const imageUrl = photos.length > 0 ? photos[0] : 'default-image-url';
   return (
     <Col lg="4" md="4" sm="6" className="mb-5">
@@ -35,8 +35,8 @@ const CarItem = (props) => {
             <Link to={`/contact`}>Buy now</Link>
           </button>
 
-          <button className="w-50 car__item-btn car__btn-details">
-            <Link to={`/cars`}>Details</Link>
+          <button className="w-50 car__item-btn car__btn-details"> 
+            <Link to={`/cars/${_id}`}>Details</Link>
           </button>
         </div>
       </div>

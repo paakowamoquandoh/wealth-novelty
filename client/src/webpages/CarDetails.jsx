@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -16,7 +16,7 @@ const CarDetails = () => {
   const [open, setOpen] = useState(false);
   const { slug } = useParams();
   const { data, loading, error } = useFetch(
-    "http://localhost:8800/api/carslist"
+    "http://localhost:8800/api/hotels"
   );
 
   // Check if data is loaded before trying to find the item
@@ -99,10 +99,6 @@ const CarDetails = () => {
                 </h2>
 
                 <div className="d-flex align-items-center gap-5 mb-4 mt-3">
-                  <h6 className="rent__price fw-bold fs-4">
-                    Ghc{item.pricePerDay}/day
-                  </h6>
-
                   <span className="d-flex align-items-center gap-2">
                     <span style={{ color: "#f9a826" }}>
                       <i className="ri-star-s-fill"></i>
@@ -112,6 +108,11 @@ const CarDetails = () => {
                       <i className="ri-star-s-fill"></i>
                     </span>
                     ({item.rating} ratings)
+                  </span>
+                  <span>
+                    <h3>
+                      Ghc {item.sellingPrice}
+                    </h3>
                   </span>
                 </div>
 
@@ -203,20 +204,20 @@ const CarDetails = () => {
                 >
                   View Terms and Conditions
                 </button>
-                <span>
-                  <h2>
-                    <b> Ghc 2245</b> for 3days
-                  </h2>
-                </span>
+              </div>
+              <div>
+              <button className="w-50 car__item-btn car__btn-rent">
+                            <Link to={`/contact`}>Buy now</Link>
+                          </button>
               </div>
             </Col>
 
-            <Col lg="5" className="mt-5">
+            {/* <Col lg="5" className="mt-5">
               <div className="payment__info mt-5">
                 <h5 className="mb-4 fw-bold">Payment Information</h5>
                 <PaymentMethod />
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
