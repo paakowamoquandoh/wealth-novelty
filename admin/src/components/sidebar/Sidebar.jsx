@@ -15,7 +15,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Sidebar = () => {
   const { dispatch: darkDispatch } = useContext(DarkModeContext);
-  const { user, dispatch: authDispatch } = useContext(AuthContext);
+  const { dispatch: authDispatch } = useContext(AuthContext);
   
     const navigate = useNavigate();
 
