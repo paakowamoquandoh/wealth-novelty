@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const CarListing = () => {
   const { data, loading, error } = useFetch(
-    'http://localhost:8800/api/hotels?forSale=true'
+    'https://wealth-novelty-car-shop.onrender.com/api/hotels?forSale=true'
   );
   const navigate = useNavigate();
 

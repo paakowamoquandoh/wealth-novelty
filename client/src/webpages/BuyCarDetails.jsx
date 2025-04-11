@@ -17,7 +17,7 @@ const BuyCarDetails = () => {
   const [open, setOpen] = useState(false);
   const { slug } = useParams();
   const { data, loading, error } = useFetch(
-    'http://localhost:8800/api/carslist'
+    'https://wealth-novelty-car-shop.onrender.com/api/carslist'
   );
 
   // Check if data is loaded before trying to find the item

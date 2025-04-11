@@ -9,7 +9,7 @@ const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState()
-  const baseURL = 'http://localhost:8800/api';
+  const baseURL = 'https://wealth-novelty-car-shop.onrender.com/api';
   const { data, loading, error } = useFetch(`${baseURL}/${path}`);
 
   useEffect(() => {

@@ -12,7 +12,7 @@ const NewRoom = () => {
   const [hotelid, setHotelId] = useState(undefined);
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading } = useFetch("http://localhost:8800/api/hotels", {withCredentials:true});
+  const { data, loading } = useFetch("https://wealth-novelty-car-shop.onrender.com/api/hotels", {withCredentials:true});
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -22,7 +22,7 @@ const NewRoom = () => {
     e.preventDefault();
     const roomNumbers = rooms.split(",").map((room) => ({ number: room }));
     try {
-      await axios.post(`http://localhost:8800/api/rooms/${hotelid}`, { ...info, roomNumbers }, {withCredentials:true});
+      await axios.post(`https://wealth-novelty-car-shop.onrender.com/api/rooms/${hotelid}`, { ...info, roomNumbers }, {withCredentials:true});
     } catch (err) {
       console.log(err);
     }

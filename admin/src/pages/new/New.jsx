@@ -26,7 +26,7 @@ const New = ({ inputs }) => {
         ...info,
         img: url,
       };
-      await axios.post("http://localhost:8800/api/auth/register", newUser, {withCredentials:true})
+      await axios.post("https://wealth-novelty-car-shop.onrender.com/api/auth/register", newUser, {withCredentials:true})
     } catch (error) { 
       console.error("Error during registration:", error);
       alert("Error occurred during registration. Check console for details.");

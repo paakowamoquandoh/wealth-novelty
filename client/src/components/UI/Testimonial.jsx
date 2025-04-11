@@ -10,7 +10,7 @@ import RentalItem from "./rentalItem";
 
 const Testimonial = () => {
   const { data, loading, error } = useFetch(
-    'http://localhost:8800/api/hotels?featured=true'
+    'https://wealth-novelty-car-shop.onrender.com/api/hotels?featured=true'
   );
   const navigate = useNavigate(); // Initialize navigate function
 

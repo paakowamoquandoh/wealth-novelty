@@ -12,7 +12,7 @@ const NewHotel = () => {
   const [info, setInfo] = useState({});
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading } = useFetch("http://localhost:8800/api/rooms");
+  const { data, loading } = useFetch("https://wealth-novelty-car-shop.onrender.com/api/rooms");
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -50,7 +50,7 @@ const NewHotel = () => {
         photos: list,
       };
   
-      await axios.post("http://localhost:8800/api/hotels", newhotel, { withCredentials: true });
+      await axios.post("https://wealth-novelty-car-shop.onrender.com/api/hotels", newhotel, { withCredentials: true });
   
       // Alert on successful upload
       alert("Upload successful!");

@@ -16,7 +16,7 @@ import useFetch from "../../hooks/useFetch";
 
 const MySwiper = () => {
   const { data, loading } = useFetch(
-    "http://localhost:8800/api/hotels/countByModel"
+    "https://wealth-novelty-car-shop.onrender.com/api/hotels/countByModel"
   );
 
   const images = [
